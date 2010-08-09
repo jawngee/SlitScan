@@ -1,0 +1,19 @@
+BSD Licensed.
+
+This is a command line tool to generate slit scan videos from a video source.  It will generate a series of PNG files.
+
+Usage:
+
+SlitScan -input <path/to/file> -output <directory/path> -prefix filename- -start 0 -end 0 -distance 1 -offset 0
+
+All of the options are required:
+
+input - The complete path to the video file.
+output - The path to where you want the series of PNG files generated
+prefix - The file name prefix for the generated files
+start - The frame to start at
+end - The frame to end at, 0 to process all frames
+distance - The width of the slit in pixels
+offset - The offset into the video frame where the slit is centered, 0=left, 0.5=center 1=right
+
+Note: Must be compiled 32-bit since it uses some low level Quicktime shit that's not available in 64-bit.
